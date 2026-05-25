@@ -39,6 +39,13 @@ Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
 
 //route CRUD
+Route::get('/pegawainama/nama', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+
 Route::get('/pegawai', [PegawaiDBController::class, 'index']);
-Route::get('/formulir', 'PegawaiController@formulir');
-Route::post('/formulir/proses', 'PegawaiController@proses');
+Route::get('/pegawaitambah',[PegawaiDBController::class, 'tambah']);
+Route::post('/pegawaistore',[PegawaiDBController::class, 'store']);
+Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
+Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
+Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
