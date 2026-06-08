@@ -13,28 +13,42 @@
 
         <div class="card">
             <div class="card-header">
-                Form Tambah Data Pegawai
+                Form Tambah Data Nilai
             </div>
 
-            <div class="form-group">
-                <label>NRP</label>
-                <input type="text" name="NRP" required="required" class="form-control">
+            <div class="card-body">
+                <form action="/nilaikuliahstore" method="post">
+                    {{ csrf_field() }}
+
+                    <div class="row mb-3">
+                        <label for="nrp" class="col-sm-2 col-form-label">NRP</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="NRP" id="nrp" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="NilaiAngka" class="col-sm-2 col-form-label">Nilai Angka</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="NilaiAngka" id="jabatan" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="SKS" class="col-sm-2 col-form-label">SKS</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="SKS" id="sks" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <input type="submit" value="Simpan Data" class="btn btn-primary">
+                        </div>
+                    </div>
+
+                </form>
             </div>
-
-            <div class="form-group">
-                <label>Nilai Angka</label>
-                <input type="number" name="NilaiAngka" required="required" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label>SKS</label>
-                <input type="number" name="SKS" required="required" class="form-control">
-            </div>
-
-            <input type="submit" value="Simpan Data" class="btn btn-success">
-
-            </form>
-        </div>
         </div>
         <br />
         <br />
