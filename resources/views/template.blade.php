@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
+
+{{--<head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Dell</title>
+    <title>5026241022 - Jennifer Nabiila Nanda Hariani</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -50,12 +49,11 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="">Pegawai</a></li>
+                    <li><a href="/pegawai">Pegawai</a></li>
                     <li><a href="">PR 1</a></li>
                     <li><a href="">PR 2</a></li>
                     <li><a href="">Pertemuan 15</a></li>
                     <li><a href="">EAS</a></li>
-
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -64,87 +62,83 @@
     </header>
 
     <main class="main">
-            <!--bagian konten blog-->
-            @yield ('konten')
+
+        <!--bagian konten CRUD-->
+        @yield('konten')
+
     </main>
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
-                        data-aos="zoom-out">
-                        <h1>Technology built for you, your vision, your ambition and your story.</h1>
-                        <p></p>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-                        <div class="d-flex">
-                            <a href="#about" class="btn-get-started">Get Started</a>
-                            <a href="visitstore.bio/dell?tab=ig"
-                                class="glightbox btn-watch-video d-flex align-items-center"><i
-                                    class="bi bi-play-circle"></i><span>Visit Store</span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                        <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
-                    </div>
-                </div>
-            </div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-        </section><!-- /Hero Section -->
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-        <!-- Why Us Section -->
-        <section id="why-us" class="section why-us light-background" data-builder="section">
+</body><!DOCTYPE html>
+<html lang="en"> --}}
 
+<head>
+    <title>5026241022 Jennifer Nabiila Nanda Hariani</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h3>5026241022 Jennifer Nabiila Nanda Hariani</h3>
+            <h6>@yield('title')</h6>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
             <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/pegawai">Pegawai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/meja">Meja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/nilaikuliah">Latihan E5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">PR 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EAS</a>
+                    </li>
 
-                <div class="row gy-4">
-
-                    <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
-
-                        <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-                            <h3><span>“The XPS 14 is back and better than ever.” -
-                                </span><strong>@zdnet_official</strong></h3>
-                            <p>
-                                XPS 14 reflects our renewed focus on thoughtful design and real world performance. From
-                                a refined chassis to efficiency driven hardware choices, ZDNet highlights why this
-                                generation represents a true return to form.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 order-1 order-lg-2 why-us-img">
-                        <img src="assets/img/laptop.png" class="img-fluid" alt="" data-aos="zoom-in"
-                            data-aos-delay="100">
-                    </div>
-                </div>
-
+                </ul>
             </div>
-
-        </section><!-- /Why Us Section -->
-    </main>
-</body>
-
-<!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-
-<!-- Preloader -->
-<div id="preloader"></div>
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
+        </nav>
+        <div class="container">
+            @yield('konten')
+        </div>
+    </div>
 
 </body>
 
 </html>
+
+
+</html>
+
+

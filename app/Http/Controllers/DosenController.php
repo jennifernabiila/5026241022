@@ -1,19 +1,23 @@
 <?php
 
+//di java: package kuliah.pert3
 namespace App\Http\Controllers;
-//package kuliah.pert3
 
+//di java: import
 use Illuminate\Http\Request;
-//import
 
 class DosenController extends Controller
 {
+    //
+
     public function index(){
         return "<h1>Halo ini adalah method index, dalam controller DosenController. - www.malasngoding.com</h1>";
     }
+
     public function biodata(){
-        $nama = "Cheryl Salsabilla Hendarto";
-        $pelajaran = ["Algoritma & Pemrograman","Kalkulus","Pemrograman Web"];
-    	return view('biodata',['nama' => $nama, 'matkul' => $pelajaran]);
+        $nama = "Jennifer Nabiila";
+        $matkul = ["Algoritma & Pemrograman","Kalkulus","Pemrograman Web"];
+
+        return view('biodata', ['nama' => $nama, 'matkul' => $matkul]);
     }
 }

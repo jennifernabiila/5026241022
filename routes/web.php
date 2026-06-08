@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\NilaiKuliahController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,6 +47,11 @@ Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 Route::get('/pegawai', [PegawaiDBController::class, 'index']);
 Route::get('/pegawaitambah',[PegawaiDBController::class, 'tambah']);
 Route::post('/pegawaistore',[PegawaiDBController::class, 'store']);
-Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
-Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
-Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+Route::get('/pegawaiedit/{id}',[PegawaiDBController::class, 'edit']);
+Route::post('/pegawaiupdate', [PegawaiDBController::class, 'update']);
+Route::get('/pegawaihapus/{id}', [PegawaiDBController::class, 'hapus']);
+Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
+
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index']);
+Route::get('/nilaikuliahtambah',[NilaiKuliahController::class, 'tambah']);
+Route::post('/nilaikuliahstore',[NilaiKuliahController::class, 'store']);
