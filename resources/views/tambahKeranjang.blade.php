@@ -1,43 +1,42 @@
 <!-- Menghubungkan dengan view template master -->
 @extends('template')
 
-@section('title', 'Tambah Nilai')
+@section('title', 'Tambah Keranjang')
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
 @section('konten')
     <center>
-
 
         <br />
         <br />
 
         <div class="card">
             <div class="card-header">
-                Form Tambah Data Nilai
+                Form Tambah Keranjang
             </div>
 
             <div class="card-body">
-                <form action="/nilaikuliahstore" method="post">
+                <form action="/keranjangstore" method="post">
                     {{ csrf_field() }}
 
                     <div class="row mb-3">
-                        <label for="nrp" class="col-sm-2 col-form-label">NRP</label>
+                        <label for="KodeBarang" class="col-sm-2 col-form-label">Kode Barang</label>
                         <div class="col-sm-10">
-                            <input type="text" name="NRP" id="nrp" class="form-control" required>
+                            <input type="text" name="KodeBarang" id="KodeBarang" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="NilaiAngka" class="col-sm-2 col-form-label">Nilai Angka</label>
+                        <label for="Jumlah" class="col-sm-2 col-form-label">Jumlah</label>
                         <div class="col-sm-10">
-                            <input type="text" name="NilaiAngka" id="jabatan" class="form-control" required>
+                            <input type="text" name="Jumlah" id="Jumlah" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="SKS" class="col-sm-2 col-form-label">SKS</label>
+                        <label for="Harga" class="col-sm-2 col-form-label">Harga</label>
                         <div class="col-sm-10">
-                            <input type="number" name="SKS" id="sks" class="form-control" required>
+                            <input type="text" name="Harga" id="Harga" class="form-control" required>
                         </div>
                     </div>
 
@@ -52,6 +51,6 @@
         </div>
         <br />
         <br />
-        <a href="/nilaikuliah" class="btn btn-info"> Kembali</a>
+        <a href="/keranjangbelanja" class="btn btn-info"> Kembali</a>
     </center>
 @endsection

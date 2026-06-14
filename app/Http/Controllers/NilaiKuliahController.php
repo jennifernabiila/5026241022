@@ -13,14 +13,14 @@ class NilaiKuliahController extends Controller
         $nilaikuliah = DB::table('nilaikuliah')->get();
 
         // mengirim data nilaikuliah ke view index
-        return view('nilaikuliah.index', ['nilaikuliah' => $nilaikuliah]);
+        return view('indexNilai', ['nilaikuliah' => $nilaikuliah]);
     }
 
     // method untuk menampilkan view form tambah data
     public function tambah()
     {
         // memanggil view tambah
-        return view('nilaikuliah.tambah');
+        return view('tambahNilai');
     }
 
     // method untuk insert data ke table nilaikuliah

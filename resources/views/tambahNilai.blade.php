@@ -1,48 +1,42 @@
 <!-- Menghubungkan dengan view template master -->
 @extends('template')
 
-@section('title', 'Tambah Pegawai')
+@section('title', 'Tambah Nilai')
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
 @section('konten')
     <center>
+
         <br />
         <br />
 
         <div class="card">
             <div class="card-header">
-                Form Tambah Data Pegawai
+                Form Tambah Data Nilai
             </div>
 
             <div class="card-body">
-                <form action="/pegawaistore" method="post">
+                <form action="/nilaikuliahstore" method="post">
                     {{ csrf_field() }}
 
                     <div class="row mb-3">
-                        <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                        <label for="nrp" class="col-sm-2 col-form-label">NRP</label>
                         <div class="col-sm-10">
-                            <input type="text" name="nama" id="nama" class="form-control" required>
+                            <input type="text" name="NRP" id="nrp" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="jabatan" class="col-sm-2 col-form-label">Jabatan</label>
+                        <label for="NilaiAngka" class="col-sm-2 col-form-label">Nilai Angka</label>
                         <div class="col-sm-10">
-                            <input type="text" name="jabatan" id="jabatan" class="form-control" required>
+                            <input type="text" name="NilaiAngka" id="jabatan" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label for="umur" class="col-sm-2 col-form-label">Umur</label>
+                        <label for="SKS" class="col-sm-2 col-form-label">SKS</label>
                         <div class="col-sm-10">
-                            <input type="number" name="umur" id="umur" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
-                        <div class="col-sm-10">
-                            <textarea name="alamat" id="alamat" class="form-control" rows="4" required></textarea>
+                            <input type="number" name="SKS" id="sks" class="form-control" required>
                         </div>
                     </div>
 
@@ -57,6 +51,6 @@
         </div>
         <br />
         <br />
-        <a href="/pegawai" class="btn btn-info"> Kembali</a>
+        <a href="/nilaikuliah" class="btn btn-info"> Kembali</a>
     </center>
 @endsection

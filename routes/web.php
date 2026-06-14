@@ -5,6 +5,10 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\KeranjangController;
+use App\Http\Controllers\MobilController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,16 +24,16 @@ Route::get('blog', function () {
 
 //Tugas
 Route::get('pert-1', function () {
-    return view('pertemuan5');
+    return view('pertemuan1');
 });
 Route::get('pert-2', function () {
-    return view('pertemuan5');
+    return view('pertemuan2');
 });
 Route::get('pert-3', function () {
-    return view('pertemuan5');
+    return view('pertemuan3');
 });
 Route::get('pert-4', function () {
-    return view('pertemuan5');
+    return view('pertemuan4');
 });
 Route::get('pert-5', function () {
     return view('pertemuan5');
@@ -52,6 +56,27 @@ Route::post('/pegawaiupdate', [PegawaiDBController::class, 'update']);
 Route::get('/pegawaihapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawaicari', [PegawaiDBController::class, 'cari']);
 
+//route CRUD siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+//route CRUD nilai kuliah
 Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index']);
 Route::get('/nilaikuliahtambah',[NilaiKuliahController::class, 'tambah']);
 Route::post('/nilaikuliahstore',[NilaiKuliahController::class, 'store']);
+
+//route CRUD keranjang belanja
+Route::get('/keranjangbelanja', [KeranjangController::class, 'index']);
+Route::get('/keranjangtambah/{id}',[KeranjangController::class, 'tambah']);
+Route::post('/keranjangstore',[KeranjangController::class, 'store']);
+Route::get('/keranjanghapus/{id}', [KeranjangController::class, 'hapus']);
+
+//route CRUD mobil (pra EAS)
+Route::get('/mobil', [MobilController::class, 'index']);
+Route::get('/mobiltambah',[MobilController::class, 'tambah']);
+Route::post('/mobilstore',[MobilController::class, 'store']);
+Route::get('/mobilhapus', [MobilController::class, 'hapus']);
