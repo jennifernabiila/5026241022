@@ -11,7 +11,7 @@
 
     <div class="container">
         <div class="mt-4 p-5 bg-primary text-white rounded">
-            <h3>5026241022 Jennifer Nabiila Nanda Hariani</h3>
+            <h3>Kode Soal nilai_peserta</h3>
             <h6>@yield('title')</h6>
         </div>
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
@@ -33,7 +33,7 @@
                         <a class="nav-link" href="/mobil">Tugas Pra EAS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/EAS">EAS</a>
+                        <a class="nav-link" href="/eas">EAS</a>
                     </li>
 
                 </ul>

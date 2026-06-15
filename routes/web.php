@@ -8,6 +8,8 @@ use App\Http\Controllers\NilaiKuliahController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KeranjangController;
 use App\Http\Controllers\MobilController;
+use App\Http\Controllers\EASController;
+
 
 
 Route::get('/', function () {
@@ -80,3 +82,8 @@ Route::get('/mobil', [MobilController::class, 'index']);
 Route::get('/mobiltambah',[MobilController::class, 'tambah']);
 Route::post('/mobilstore',[MobilController::class, 'store']);
 Route::get('/mobilhapus', [MobilController::class, 'hapus']);
+
+//route CRUD EAS
+Route::get('/eas', [EASController::class, 'index']);
+Route::get('/eastambah',[EASController::class, 'tambah']);
+Route::post('/easstore',[EASController::class, 'store']);
